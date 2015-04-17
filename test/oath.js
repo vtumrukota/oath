@@ -7,7 +7,7 @@ var _      = require('underscore');
 oath.promisify = oath.promisify || function () {};
 
 var promiseTimeout = function (func, time) {
-  var defer = oath.defer();
+  var defer = oath.defer(); // deferred object w/ empty promise
   setTimeout(function () {
     defer.resolve(func());
   }, time);
